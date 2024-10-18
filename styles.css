@@ -1,0 +1,36 @@
+body {
+    font-size: 14px;
+    background-color: aliceblue;
+    display: flex;
+  }
+  p.title {
+    font-style: italic;
+    font-weight: 500;
+    font-size: 16px;
+  }
+  
+  title {
+    color: red;
+    background-color: blue;
+  }
+p {
+    font-weight: bold;
+    border-width: 10px;
+    padding:20px;
+    border-color: bisque;
+  }
+  p:active {
+    color: red;
+  }
+  
+  p:hover {
+    color: green;
+    text-decoration: none;
+  }
+  label,p{
+    color:aqua;
+  }
+  navbar{
+    font-size: large;
+    font-family: "Helvetica", "Arial", "sans-serif";
+  }

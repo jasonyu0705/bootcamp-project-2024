@@ -1,0 +1,15 @@
+{
+  "name": "jasonyu0705.github.io",
+  "version": "1.0.0",
+  "description": "This is a personal website built using the Hack4Impact Starter Pack! [visit it here!](https://jasonyu0705.github.io)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cowsay": "^1.6.0"
+  }
+}
