@@ -1,7 +1,7 @@
 body {
     font-size: 14px;
-    background-color: aliceblue;
-    display: flex;
+    background-color: hsl(224, 47%, 42%);
+    
   }
   p.title {
     font-style: italic;
@@ -14,23 +14,31 @@ body {
     background-color: blue;
   }
 p {
+    border-radius: 25px;
     font-weight: bold;
     border-width: 10px;
     padding:20px;
     border-color: bisque;
+    background: green
+    
   }
-  p:active {
-    color: red;
-  }
-  
-  p:hover {
-    color: green;
+p:hover {
+    color: rgba(57, 75, 155, 0.656);
     text-decoration: none;
   }
   label,p{
     color:aqua;
   }
-  navbar{
+  .navbar{
     font-size: large;
     font-family: "Helvetica", "Arial", "sans-serif";
+
+  }
+  .nav-list{
+    display:flex;
+    
+  }
+  .logo{
+    color:bisque;
+    text-align:center;
   }
