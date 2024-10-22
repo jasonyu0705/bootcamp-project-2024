@@ -8,31 +8,26 @@ body {
     min-height: 100vh;
 
   }
-  p.title {
-    font-style: italic;
-    font-weight: 500;
-    font-size: 16px;
+
+  h1{
+    color:white;
+    font-family: "verdana", "Arial", "sans-serif";
+    text-align: center;
   }
-  
-  title {
-    color: #F0F3F4 ;
-  }
+
 .navbar, p, .logo{
   font-family: "verdana", "Arial", "sans-serif";
 }
-p {
+.project-name {
     border-radius: 25px;
 
     font-weight: bold;
     border-width: 10px;
     padding:20px;
     background:#28B463 ;
+    color:white;
   }
-p:hover {
-    color: rgba(57, 75, 155, 0.656);
-    text-decoration: none;
-  }
-label,p{
+  .project-description{
     color:white;
   }
 .navbar{
@@ -48,13 +43,7 @@ li{
   }
 .nav-list{
     display:flex;
-    
   }
-.logo{
-  color:#28B463;
-  text-align:center;
-
-}
 a, a:hover ,a:visited, a:active, .backlink{
   color:#F0F3F4 ;
   text-decoration: none;
