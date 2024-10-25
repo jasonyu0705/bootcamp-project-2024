@@ -42,13 +42,16 @@ label,p{
 ul{
   background-color:#28B463;
   border-radius: 25px;
+  justify-content: space-between;
 }
 li{
   padding-inline: 5%;
+  
+  
   }
 .nav-list{
     display:flex;
-    
+
   }
 .logo{
   color:#28B463;
@@ -62,5 +65,14 @@ a, a:hover ,a:visited, a:active, .backlink{
 }
 footer{
   margin-top:auto;
+  color:#F0F3F4 ;
+}
+.blog{
+  background-color: #28B463;
+  border-radius: 25px;
+}
+.blog>h1{
+  padding:0 5%;
+  font-family: "verdana";
   color:#F0F3F4 ;
 }
