@@ -14,7 +14,7 @@ const J_Blog: Blog[] = [
         description: "first blog",
         image:"https://media.licdn.com/dms/image/v2/C560BAQGDbdhpmxRmrg/company-logo_200_200/company-logo_200_200/0/1633548685050/hack4impact_logo?e=2147483647&v=beta&t=Cgni3x2P5I8nwhyAaHkblCo0OP6yx857PLG7O5Zw_W4",
         imageAlt:"random image",
-        slug: "blog.com"
+        slug: "./blog/blog1.html"
     },
     {
         title: "blog 2",
@@ -22,7 +22,7 @@ const J_Blog: Blog[] = [
         description: "working on my bootcamp project",
         image:"https://media.licdn.com/dms/image/v2/C560BAQGDbdhpmxRmrg/company-logo_200_200/company-logo_200_200/0/1633548685050/hack4impact_logo?e=2147483647&v=beta&t=Cgni3x2P5I8nwhyAaHkblCo0OP6yx857PLG7O5Zw_W4",
         imageAlt:"random image",
-        slug:"blog.com" 
+        slug:"./blog/blog2.html" 
     }
 
 ];
@@ -47,13 +47,13 @@ J_Blog.forEach(blog => {
     blog_img.alt = blog.imageAlt;
 
     const blog_slug = document.createElement('a');
-    blog_slug.textContent = blog.slug;
+    blog_slug.text= blog.slug;
+    blog_slug.href = blog.slug;
 
     blogElement.appendChild(blog_title);
     blogElement.appendChild(blog_date);
     blogElement.appendChild(blog_description);
     blogElement.appendChild(blog_img);
     blogElement.appendChild(blog_slug);
-
     blogContainer && blogContainer.appendChild(blogElement);
 });

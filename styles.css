@@ -67,7 +67,7 @@ footer{
   margin-top:auto;
   color:#F0F3F4 ;
 }
-.blog{
+.blog, .blog>a{
   background-color: #28B463;
   border-radius: 25px;
 }
