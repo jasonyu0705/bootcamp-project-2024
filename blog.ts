@@ -28,8 +28,12 @@ const J_Blog: Blog[] = [
 ];
 
 const blogContainer  = document.getElementById('j-blog-container');
+const blogContainer1  = document.getElementById('j-blog-container-1');
+const blogContainer2  = document.getElementById('j-blog-container-2');
 
-J_Blog.forEach(blog => {
+
+
+J_Blog.forEach((blog,index) => {
     const blogElement = document.createElement('div');
     blogElement.classList.add('blog');
 
@@ -54,6 +58,17 @@ J_Blog.forEach(blog => {
     blogElement.appendChild(blog_date);
     blogElement.appendChild(blog_description);
     blogElement.appendChild(blog_img);
-    blogElement.appendChild(blog_slug);
-    blogContainer && blogContainer.appendChild(blogElement);
+    // Append each blog to its respective container
+    if (index === 0 && blogContainer1) {
+        blogContainer1.appendChild(blogElement);
+    } else if (index === 1 && blogContainer2) {
+        blogContainer2.appendChild(blogElement);
+    } else if (blogContainer) {
+        // Fallback if blogContainer1 or blogContainer2 are missing
+        blogContainer.appendChild(blogElement);
+        blogElement.appendChild(blog_slug);
+
+    }
+
+
 });

@@ -17,7 +17,9 @@ var J_Blog = [
     }
 ];
 var blogContainer = document.getElementById('j-blog-container');
-J_Blog.forEach(function (blog) {
+var blogContainer1 = document.getElementById('j-blog-container-1');
+var blogContainer2 = document.getElementById('j-blog-container-2');
+J_Blog.forEach(function (blog, index) {
     var blogElement = document.createElement('div');
     blogElement.classList.add('blog');
     var blog_title = document.createElement('h1');
@@ -36,6 +38,16 @@ J_Blog.forEach(function (blog) {
     blogElement.appendChild(blog_date);
     blogElement.appendChild(blog_description);
     blogElement.appendChild(blog_img);
-    blogElement.appendChild(blog_slug);
-    blogContainer && blogContainer.appendChild(blogElement);
+    // Append each blog to its respective container
+    if (index === 0 && blogContainer1) {
+        blogContainer1.appendChild(blogElement);
+    }
+    else if (index === 1 && blogContainer2) {
+        blogContainer2.appendChild(blogElement);
+    }
+    else if (blogContainer) {
+        // Fallback if blogContainer1 or blogContainer2 are missing
+        blogContainer.appendChild(blogElement);
+        blogElement.appendChild(blog_slug);
+    }
 });

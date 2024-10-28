@@ -1,25 +1,20 @@
+*{
+  font-family: "verdana";
+  color: #F0F3F4 ;
+}
 body {
     font-size: 14px;
     background-color:#2E86C1;
     display: flex;
-
     flex-direction: column;
-
     min-height: 100vh;
 
   }
-  p.title {
-    font-style: italic;
-    font-weight: 500;
-    font-size: 16px;
+
+  h1 {
+    text-align:center;
   }
-  
-  title {
-    color: #F0F3F4 ;
-  }
-.navbar, p, .logo{
-  font-family: "verdana", "Arial", "sans-serif";
-}
+
 p {
     border-radius: 25px;
 
@@ -46,12 +41,9 @@ ul{
 }
 li{
   padding-inline: 5%;
-  
-  
   }
 .nav-list{
     display:flex;
-
   }
 .logo{
   color:#28B463;
@@ -67,12 +59,23 @@ footer{
   margin-top:auto;
   color:#F0F3F4 ;
 }
-.blog, .blog>a{
+.blog,.blog>a{
   background-color: #28B463;
   border-radius: 25px;
 }
 .blog>h1{
   padding:0 5%;
-  font-family: "verdana";
+  font-family: "verdana"; 
   color:#F0F3F4 ;
 }
+input[type=submit]{
+  background-color: #28B463;
+  border-radius: 25px;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: "verdana", "Arial", "sans-serif";
+}
+
+#name,

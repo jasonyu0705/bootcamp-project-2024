@@ -37,6 +37,7 @@ body {
 ul{
   background-color:#28B463;
   border-radius: 25px;
+  justify-content: space-between;
 }
 li{
   padding-inline: 5%;
