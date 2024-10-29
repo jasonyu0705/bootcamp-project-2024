@@ -51,3 +51,4 @@ J_Blog.forEach(function (blog, index) {
         blogElement.appendChild(blog_slug);
     }
 });
+
