@@ -61,12 +61,16 @@ footer{
 }
 .blog,.blog>a{
   background-color: #28B463;
-  border-radius: 25px;
+  border-radius: 25px;  
+  max-width: 50%;
+  margin-left: auto;
+  margin-right: auto;
 }
 .blog>h1{
   padding:0 5%;
   font-family: "verdana"; 
-  color:#F0F3F4 ;
+  color:#F0F3F4;
+  align-content: center;
 }
 input[type=submit]{
   background-color: #28B463;
@@ -78,4 +82,11 @@ input[type=submit]{
   font-family: "verdana", "Arial", "sans-serif";
 }
 
-#name,
+#name,#email, #comments, ::placeholder{
+  background-color: #28B463;
+  color: white;
+  border-radius: 25px;
+}
+footer{
+  background-color: #28B463;
+}
