@@ -1,0 +1,16 @@
+
+.navbar{
+  font-size: large;
+  font-family: "verdana";
+  color: #F0F3F4 ;
+}
+.nav_list{
+  display:flex;
+  justify-content: space-between;
+  padding:0 100px;
+}
+.page_title{
+  font-family: "verdana";
+  color:white;
+  text-align: center;
+}

@@ -1,0 +1,16 @@
+
+.pageTitle{
+    background-color: rgb(103, 191, 125);
+    font-family:"verdana";
+    border-radius: 20px;
+}
+.blogContainer{
+    font-family:"verdana";
+    padding:20px;
+
+}
+.photo{
+
+    padding: 20px;
+    max-height: 10px;
+}
