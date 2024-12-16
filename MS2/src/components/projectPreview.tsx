@@ -1,5 +1,5 @@
 import React from 'react';
-import style from './blogPreview.module.css'
+import style from './projectPreview.module.css'
 import { Project } from "../database/projectSchema"; // importing the type/interface we defined earlier
 
 
