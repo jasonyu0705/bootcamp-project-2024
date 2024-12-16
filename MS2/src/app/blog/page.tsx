@@ -2,6 +2,7 @@ import styles from "./page.module.css";
 import BlogPreview from '@/components/blogPreview';
 import connectDB from "@/database/db";
 import Blogimp, { Blog } from "@/database/blogSchema";
+
 export default async function Blog_Home() {
   const blogs: Blog[] = await getBlogs();
   return (
