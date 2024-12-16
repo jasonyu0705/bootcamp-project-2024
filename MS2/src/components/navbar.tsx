@@ -14,11 +14,11 @@ export default function Navbar() {
         {/* We'll use Link from now on instead of <a></a>
 			      Links are just Next.js wrapper arounds <a> elements anyways
          */}
-        <Link href="/" >Home</Link>
-        <Link href="/blog">Blog</Link>
-        <Link href="/resume">Resume</Link>
-        <Link href="/contact" >Contact Me</Link>
-        <Link href="/portfolio" >portfolio</Link>
+        <Link className={style.link} href="/" >Home</Link>
+        <Link className={style.link} href="/blog">Blog</Link>
+        <Link className={style.link} href="/resume">Resume</Link>
+        <Link className={style.link} href="/contact" >Contact Me</Link>
+        <Link className={style.link} href="/portfolio" >portfolio</Link>
 
 				{/* More Links ... */}
       </nav>

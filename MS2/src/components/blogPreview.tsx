@@ -10,19 +10,16 @@ export default function BlogPreview(props: Blog)  {
   return (
 		// replace everything between the <div> & </div> tags
 		// with your code from earlier milestones
+    
     <div className={style.info}>
        <h3 className={style.title}> {props.title} </h3>
-       <h3 className={style.date}> {props.date} </h3>
-    <div>
-    <img className={style.photo}
-          src={props.image} 
-          alt={props.imageAlt || 'Blog Image'} 
-
-          
-        />
-        <p className={style.description}>{props.description}</p>
-
-      </div>
+       <h3 className={style.date}> {new Date(props.date).toLocaleDateString()}</h3>
+        <div>
+        <img className={style.photo}
+              src={props.image} 
+              alt={props.imageAlt || 'Blog Image'} />
+            <p className={style.description}>{props.description}</p>
+          </div>
 	  </div>
 
   );

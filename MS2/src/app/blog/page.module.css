@@ -5,8 +5,10 @@
     border-radius: 20px;
 }
 .blogContainer{
+    display:flex;
     font-family:"verdana";
     padding:20px;
+    justify-content: center;
 
 }
 .photo{

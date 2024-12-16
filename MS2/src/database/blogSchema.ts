@@ -1,7 +1,7 @@
 import mongoose, { Schema } from "mongoose";
 
 // typescript type (can also be an interface)
-type Blog = {
+export type Blog = {
 		title: string;
         date: Date;
 	    slug: string; 
@@ -23,7 +23,7 @@ const blogSchema = new Schema<Blog>({
 })
 
 // defining the collection and model
-const Blog = mongoose.models['blogs'] ||
+const Blogimp = mongoose.models['blogs'] ||
     mongoose.model('blogs', blogSchema);
 
-export default Blog;
+export default Blogimp;

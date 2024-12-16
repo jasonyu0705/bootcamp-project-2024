@@ -6,11 +6,19 @@
 }
 .nav_list{
   display:flex;
-  justify-content: space-between;
-  padding:0 100px;
+  justify-content: center;
+  /* margin:0 auto; */
+  /* padding:0 100px; */
+  width:100vw;
+
 }
 .page_title{
   font-family: "verdana";
   color:white;
   text-align: center;
+  width:100vw;
+}
+.link{
+  width: 20vw;
+  text-align:center;
 }

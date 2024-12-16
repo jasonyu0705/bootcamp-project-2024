@@ -1,29 +1,16 @@
 import styles from "./page.module.css";
-//import blogs from '@/app/static/blogData'
 import BlogPreview from '@/components/blogPreview';
 import connectDB from "@/database/db";
-import Blogimp from "@/database/blogSchema";
-import { useEffect, useState } from "react";
-export default function Blog() {
-  // const [blogs, setBlogs]=useState([{}])
-
-  // useEffect(() => {
-  //   const fn = async () => {
-  //     return await getBlogs
-  //   }
-
-  //   setBlogs(fn)
-  // }, [])
-
-
-
+import Blogimp, { Blog } from "@/database/blogSchema";
+export default async function Blog_Home() {
+  const blogs: Blog[] = await getBlogs();
   return (
       <div>
         <h1 className={styles.pageTitle}>Blogs</h1>
         <div className={styles.blogContainer}>
 
             {blogs.map(blog =>
-               <BlogPreview {...blog} key={blog.title} />
+               <BlogPreview {...(blog as any)._doc} key={blog.title} />
             )}
         </div>
         </div>
@@ -39,6 +26,6 @@ async function getBlogs(){
 			// send a response as the blogs as the message
 	    return blogs
 	} catch (err) {
-	    return null
+	    return []
 	}
 }
