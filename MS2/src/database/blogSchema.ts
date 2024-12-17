@@ -10,7 +10,6 @@ export type Blog = {
 	  image_alt: string; // alt for image
 };
 
-
 // mongoose schema 
 const blogSchema = new Schema<Blog>({
 		title: { type: String, required: true },
@@ -21,7 +20,16 @@ const blogSchema = new Schema<Blog>({
 		slug: { type: String, required: true },
 
 })
-
+export type IComment = {
+	user: string;
+	content: string;
+	time: Date;
+}
+const commentSchema = new Schema<IComment>({
+    user: {type: String, required: true},
+    content: {type: String, required: true},
+    time: { type: Date, required: true, default: new Date()}
+})
 // defining the collection and model
 const Blogimp = mongoose.models['blogs'] ||
     mongoose.model('blogs', blogSchema);
