@@ -8,7 +8,7 @@ export type Blog = {
 		description: string; // for preview
 	  image: string; // url for string in public
 	  image_alt: string; // alt for image
-	  comment :IComment[];
+	  comments :IComment[];
 };
 
 // mongoose schema 

@@ -32,13 +32,14 @@ export default async function BlogCheck({params: { slug }}: Props) {
     const blog: Blog = await getBlog(slug);
 
 	if(!blog){
+		console.log("hello")
 		return(
 		  <div>
 			<h1 className="pageTitle">404 - Blog Not Found</h1>
 		  </div>
 		);
 	  }
-	
+	if(blog){
 	return(
         <div className={style.info}>
        {/* <h3 className={style.title}>{blog.title} </h3>
@@ -50,11 +51,12 @@ export default async function BlogCheck({params: { slug }}: Props) {
             <p className={style.description}>{blog.description}</p>
           </div>
           <div className={style.comment}>
-            {blog.comment.map((comment, index) => (
+            {blog.comments.map((comment, index) => (
 	                <Comment key={index} comment={comment} />
 	            ))}
-				
           </div>
 	  </div>
     );
+	}
+	return console.log("hello");
 }
