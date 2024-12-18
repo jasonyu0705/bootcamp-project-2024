@@ -20,7 +20,7 @@ function parseCommentTime(time: Date){
     return new Date(time).toDateString();
 }
 
-function Comment({ comment }: CommentProps) {
+export default function Comment({ comment }: CommentProps) {
     return (
     <div className={style.commentContainer}>
       <h4 className={style.commentUser}>{comment.user}</h4>
@@ -30,5 +30,3 @@ function Comment({ comment }: CommentProps) {
 
     );
 }
-
-export default Comment;

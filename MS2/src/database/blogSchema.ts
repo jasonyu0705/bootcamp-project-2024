@@ -8,6 +8,7 @@ export type Blog = {
 		description: string; // for preview
 	  image: string; // url for string in public
 	  image_alt: string; // alt for image
+	  comment :IComment[];
 };
 
 // mongoose schema 
@@ -18,6 +19,7 @@ const blogSchema = new Schema<Blog>({
 		image: { type: String, required: true },
 	    image_alt: { type: String, required: true },
 		slug: { type: String, required: true },
+		// comment: { type: String, required: true },
 
 })
 export type IComment = {
