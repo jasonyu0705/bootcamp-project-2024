@@ -12,7 +12,7 @@ export default function BlogPreview(props: Blog)  {
     
     <div className={style.info}>
       {/* <h2 key={blogs.slug}></h2> */}
- <Link className={style.title} href={`/blogs/${props.slug}`}> {props.title} </Link>
+ <Link className={style.title} href={`/blog/${props.slug}`}> {props.title} </Link>
 
        <h3 className={style.date}> {new Date(props.date).toLocaleDateString()}</h3>
         <div>
@@ -21,7 +21,6 @@ export default function BlogPreview(props: Blog)  {
               alt={props.image_alt || 'Blog Image'} />
             <p className={style.description}>{props.description}</p>
           </div>
-          
 	  </div>
 
   );

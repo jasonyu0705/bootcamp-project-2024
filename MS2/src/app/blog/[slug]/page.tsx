@@ -1,5 +1,5 @@
 
-import { Blog } from "@/database/blogSchema";
+//import { Blog } from "@/database/blogSchema";
 import style from './page.module.css'
 import Comment from "@/components/comment";
 
@@ -10,14 +10,16 @@ type Props = {
 async function getBlog(slug: string) {
 	try {
 		// This fetches the blog from an api endpoint that would GET the blog
-		const res = await fetch(`http://localhost:3000/api/blog/${slug}`, {
+		const res = await fetch(`http://localhost:3000/api/blogs/${slug}`, {
 			cache: "no-store",	
 		})
+		console.log(res)
+
+		// http://localhost:3000/blog/${slug}
 		// This checks that the GET request was successful
-		if (!res.ok) {
+		if (!res.ok) { 
 			throw new Error("Failed to fetch blog");
 		}
-
 		return res.json();
 	} catch (err: unknown) {
 		console.log(`error: ${err}`);
@@ -28,9 +30,10 @@ async function getBlog(slug: string) {
 	}
 }
 
-export default async function BlogCheck({params: { slug }}: Props) {
-    const blog: Blog = await getBlog(slug);
-
+export default async function Blog({params: { slug }}: Props) {
+	console.log('beginning');
+    const blog = await getBlog(slug);
+	
 	if(!blog){
 		console.log("hello")
 		return(
@@ -40,10 +43,13 @@ export default async function BlogCheck({params: { slug }}: Props) {
 		);
 	  }
 	if(blog){
+		console.log("end blog", blog);
+		console.log("end comments", blog.comments);
+
 	return(
         <div className={style.info}>
-       {/* <h3 className={style.title}>{blog.title} </h3>
-       <h3 className={style.date}> {new Date(blog.date).toLocaleDateString()}</h3> */}
+       <h3 className={style.title}>{blog.title} </h3>
+       <h3 className={style.date}> {new Date(blog.date).toLocaleDateString()}</h3>
         <div>
         <img className={style.photo}
               src={blog.image} 
@@ -51,12 +57,13 @@ export default async function BlogCheck({params: { slug }}: Props) {
             <p className={style.description}>{blog.description}</p>
           </div>
           <div className={style.comment}>
-            {blog.comments.map((comment, index) => (
+            {blog.comments.map((comment: any, index:any) => (
 	                <Comment key={index} comment={comment} />
 	            ))}
           </div>
 	  </div>
+	
     );
 	}
-	return console.log("hello");
+	return console.log("hi");
 }
