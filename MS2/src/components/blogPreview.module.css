@@ -5,9 +5,13 @@
     padding:20px;
     border-radius: 20px;
     margin-bottom:20px;
-    justify-content: center;
-    width:70%;
-
+    margin:auto;
+    width:50vw;
+    text-align: center;
+}
+.photo{
+    display:block;
+    margin:auto;  
 }
 .title{
     background-color: rgb(57, 174, 80);

@@ -1,6 +1,6 @@
 
 .pageTitle{
-    background-color: rgb(103, 191, 125);
+    background-color: rgb(82, 174, 105);
     font-family:"verdana";
     border-radius: 20px;
 }
@@ -8,7 +8,8 @@
     /* display:flex; */
     font-family:"verdana";
     padding:20px;
-    justify-content: center;
+
+    margin:auto;
 
 }
 .photo{

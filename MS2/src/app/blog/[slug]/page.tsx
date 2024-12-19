@@ -48,6 +48,7 @@ export default async function Blog({params: { slug }}: Props) {
 
 	return(
         <div className={style.info}>
+			
        <h3 className={style.title}>{blog.title} </h3>
        <h3 className={style.date}> {new Date(blog.date).toLocaleDateString()}</h3>
         <div>
