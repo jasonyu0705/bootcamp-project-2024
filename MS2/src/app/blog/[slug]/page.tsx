@@ -1,6 +1,6 @@
 
 //import { Blog } from "@/database/blogSchema";
-import style from './page.module.css'
+import style from './blg.module.css'
 import Comment from "@/components/comment";
 
 
@@ -13,7 +13,7 @@ async function getBlog(slug: string) {
 		const res = await fetch(`http://localhost:3000/api/blogs/${slug}`, {
 			cache: "no-store",	
 		})
-		console.log(res)
+		// console.log(res)
 
 		// http://localhost:3000/blog/${slug}
 		// This checks that the GET request was successful
@@ -22,7 +22,7 @@ async function getBlog(slug: string) {
 		}
 		return res.json();
 	} catch (err: unknown) {
-		console.log(`error: ${err}`);
+		// console.log(`error: ${err}`);
 		return null;
 		// `` are a special way of allowing JS inside a string
 		// Instead of "error: " + err, we can just do the above
@@ -31,11 +31,11 @@ async function getBlog(slug: string) {
 }
 
 export default async function Blog({params: { slug }}: Props) {
-	console.log('beginning');
+	// console.log('beginning');
     const blog = await getBlog(slug);
 	
 	if(!blog){
-		console.log("hello")
+		// console.log("hello")
 		return(
 		  <div>
 			<h1 className="pageTitle">404 - Blog Not Found</h1>
@@ -43,8 +43,8 @@ export default async function Blog({params: { slug }}: Props) {
 		);
 	  }
 	if(blog){
-		console.log("end blog", blog);
-		console.log("end comments", blog.comments);
+		// console.log("end blog", blog);
+		// console.log("end comments", blog.comments);
 
 	return(
         <div className={style.info}>
@@ -65,5 +65,5 @@ export default async function Blog({params: { slug }}: Props) {
 	
     );
 	}
-	return console.log("hi");
+	// return console.log("hi");
 }

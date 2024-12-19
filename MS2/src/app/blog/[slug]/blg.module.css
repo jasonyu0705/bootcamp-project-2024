@@ -1,0 +1,14 @@
+.comment{
+    color: white;
+}
+.info{
+    background-color: rgb(103, 191, 125);
+    font-family:"verdana";
+}
+.pageTitle{
+    background-color: rgb(18, 48, 108);
+    border-radius: 20px;
+    text-align: center;
+}
+
+
