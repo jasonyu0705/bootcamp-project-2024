@@ -1,7 +1,7 @@
 
 //import { Blog } from "@/database/blogSchema";
 import style from './blg.module.css'
-import Comment from "@/components/comment";
+import Comment from "@/components/blogComp/comment";
 
 
 type Props = {

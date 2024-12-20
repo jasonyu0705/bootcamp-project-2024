@@ -1,5 +1,5 @@
 import styles from "./page.module.css";
-import BlogPreview from '@/components/blogPreview';
+import BlogPreview from '@/components/blogComp/blogPreview';
 import connectDB from "@/database/db";
 import Blogimp, { Blog } from "@/database/blogSchema";
 import React from "react";
