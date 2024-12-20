@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import connectDB from "@/database/db"// changed from helpers to database
-import blogSchema from "@/database/blogSchema"
+import projectSchema from "@/database/projectSchema"
 
 type IParams = {
 		params:Promise<{
@@ -12,15 +12,22 @@ type IParams = {
 export async function GET(req: NextRequest, { params }: IParams) {
     await connectDB() // function from db.ts before
 	const slug  =await params;
+						//const { slug } = params // another destructure
+
+		// console.log('routing to:', slug);
 	   try {
-	        const blog = await blogSchema.findOne({ slug }).select("comments").orFail();
-	        return NextResponse.json(blog)
+	        const project = await projectSchema.findOne({ slug }).orFail()
+	        return NextResponse.json(project)
 	    } catch (err) {
-	        return NextResponse.json('Blog not found.', { status: 404 })
+	        return NextResponse.json('Project not found.', { status: 404 })
 	    }
 }
+
+
+// post project 
+
 //connects to database and posts required info if given, otherwise sends out error request
-export async function POST(req: NextRequest, { params }: IParams) {
+export async function POST(req: NextRequest, { params }: IParams) {//<--what does this do oh nvm refers to above
 	await connectDB()
 	const resparams  =await params;
 
@@ -32,7 +39,7 @@ export async function POST(req: NextRequest, { params }: IParams) {
 		const {user, comment}=body;// extracts user and comment from the body
 		//quries the bloc collections and looks for a blog with a slug that matches the slug of the resolved parameters
 		// orFail makes sure that it throws an error
-		const blog= await blogSchema.findOne({slug: resparams.slug}).orFail();
+		const blog= await projectSchema.findOne({slug: resparams.slug}).orFail();
 		//makes a new comment using a user comment and time input
 		const newcomment={
 			user,
