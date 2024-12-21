@@ -1,11 +1,12 @@
 
 .pageTitle{
     background-color:#1A2A44;
-color:#e4e4e4 ;
+    color:#e4e4e4 ;
     border-radius: 20px;
     width:70vw;
     text-align: center;
     margin:0 auto;
+    font-size: large;
 }
 .blogContainer{
     /* display:flex; */

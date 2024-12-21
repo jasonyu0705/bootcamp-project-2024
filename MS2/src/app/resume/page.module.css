@@ -1,6 +1,6 @@
 .profile_container {
     padding: 16px;
-    background-color: #467048;
+    background-color: #3B4C66;
     border-radius: 8px;
     max-width: 1000px;
     margin: 0 auto;
@@ -37,7 +37,7 @@
   }
   
   .profile_item {
-    background-color: #4eb470;
+    background-color:#1A2A44;
     padding: 12px;
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);

@@ -1,6 +1,6 @@
 import React from 'react';
 import style from './projectPreview.module.css'
-import { Project } from "../database/projectSchema"; // importing the type/interface we defined earlier
+import { Project } from "../../database/projectSchema"; // importing the type/interface we defined earlier
 
 
 export default function ProjectPreview(props: Project)  {

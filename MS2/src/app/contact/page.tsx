@@ -38,8 +38,11 @@ export default function contact() {
 
   return (
     <div className={styles.masterContainer}>
+
       <div className={styles.container}>
-        <div>
+
+
+        <div className={styles.contactMe}>
           <h1 className={styles.title}> Contact Me</h1>
           <form className={styles.form} onSubmit={handleSubmit}>
             {/* name input place */}
@@ -55,7 +58,6 @@ export default function contact() {
                 onChange={(e) => setName(e.target.value)}
               />
             </div>
-
             {/* email input place */}
             <div className={styles.inputGroup}>
               <label htmlFor="email">Email:</label>
@@ -69,7 +71,6 @@ export default function contact() {
                 onChange={(e) => setEmail(e.target.value)}
               />
             </div>
-
             {/* messages input place */}
             <div className={styles.inputGroup}>
               <label htmlFor="message">Message:</label>
@@ -90,28 +91,30 @@ export default function contact() {
         </div>
 
         <div className={styles.socialLinks}>
-          <h3>Connect with me:</h3>
-
+          <h1 className={styles.title}>Connect with me:</h1>
+         
           <a
-            href="https://linkedin.com/in/jasonyu101"
+            href="https://www.linkedin.com/in/jasonyu101"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.link}
           >
-            LinkedIn
+          <img className={styles.portrait} src='linkedin.jpg' alt="portrait" style={{ width: '40px', height: 'auto' }}/>
           </a>
+
           <a
             href="https://github.com/jasonyu0705"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.link}
           >
-            GitHub
+            <img className={styles.portrait} src='github.jpg' alt="portrait" style={{ width: '40px', height: 'auto' }}/>
           </a>
           <a href="mailto:jasonyu0705@gmail.com" className={styles.link}>
-            Email
+          <img className={styles.portrait} src='gmail.jpg' alt="portrait" style={{ width: '40px', height: 'auto' }}/>
           </a>
         </div>
+
       </div>
     </div>
   );

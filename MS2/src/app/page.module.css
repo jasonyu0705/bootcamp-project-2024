@@ -7,11 +7,13 @@
       display: flex;
       flex-direction: column;
       min-height: 100vh;
-      border-radius: 25px;
+
       padding:20px;
-      background:#3A6A8C ;
+      background:#3B4C66;
       border-color: #F08A5D;
       border-width: 4px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(172, 60, 60, 0.1);
     }
 
   .portrait{
@@ -19,9 +21,11 @@
   margin-left: auto;
   margin-right: auto;
   width: 50%;
-    border-radius: 25px;
+
     border-color: #F9D342;
       border-width: 4px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(172, 60, 60, 0.1);
   }
   .about_me{
     color:#E4E4E4;
