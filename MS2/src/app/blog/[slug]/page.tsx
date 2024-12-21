@@ -2,11 +2,18 @@
 //import { Blog } from "@/database/blogSchema";
 import style from './blg.module.css'
 import Comment from "@/components/blogComp/comment";
+import NewComment from '../../../components/blogComp/newComment';
 
 
+// type Props = {
+//     params: { slug: string }
+// }
 type Props = {
-    params: { slug: string }
+	params:Promise<{
+		slug: string
+	}>;
 }
+
 async function getBlog(slug: string) {
 	try {
 		// This fetches the blog from an api endpoint that would GET the blog
@@ -14,8 +21,6 @@ async function getBlog(slug: string) {
 			cache: "no-store",	
 		})
 		// console.log(res)
-
-		// http://localhost:3000/blog/${slug}
 		// This checks that the GET request was successful
 		if (!res.ok) { 
 			throw new Error("Failed to fetch blog");
@@ -29,13 +34,18 @@ async function getBlog(slug: string) {
 		// it is simular to formated strings in python --> f"{err}"
 	}
 }
-
-export default async function Blog({params: { slug }}: Props) {
-	// console.log('beginning');
+//passing in object --> not explicitly defining it in function call
+//							parameter        object skeleton
+export default async function Blog({params}: Props) {
+	const slug = (await params).slug;
     const blog = await getBlog(slug);
+
+	 //console.log('params        ',params);
+
+
 	
 	if(!blog){
-		// console.log("hello")
+		 console.log("hello")
 		return(
 		  <div>
 			<h1 className="pageTitle">404 - Blog Not Found</h1>
@@ -43,8 +53,6 @@ export default async function Blog({params: { slug }}: Props) {
 		);
 	  }
 	if(blog){
-		// console.log("end blog", blog);
-		// console.log("end comments", blog.comments);
 
 	return(
         <div className={style.info}>
@@ -62,9 +70,10 @@ export default async function Blog({params: { slug }}: Props) {
 	                <Comment key={index} comment={comment} />
 	            ))}
           </div>
+		<NewComment slug={slug}/>		  
 	  </div>
 	
     );
 	}
-	// return console.log("hi");
+	 return console.log("hi");
 }

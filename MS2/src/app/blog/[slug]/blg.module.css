@@ -1,6 +1,8 @@
 .comment{
     color: white;
+    background-color: rgb(49, 96, 74);
 }
+
 .info{
     background-color: rgb(34, 123, 56);
     font-family:"verdana";

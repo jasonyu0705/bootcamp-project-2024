@@ -1,88 +1,118 @@
-
+"use client";
+import emailjs from "emailjs-com";
+import React, { useState } from "react";
 import styles from "./page.module.css";
 
-
 export default function contact() {
-        return (
-          <div className={styles.masterContainer} >
-<div className={styles.container}>
-            <div>
-            <h1  className={styles.title}> Contact Me</h1>
-            <form className={styles.form}>
-
-              
-              {/* name input place */}
-              <div className={styles.inputGroup}>
-                <label htmlFor="name!uytfdhjtyufgnvb">Name:</label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  placeholder="Your Name"
-                  required
-                  className={styles.input}
-                />
-              </div>
 
 
-                {/* email input place */}
-              <div className={styles.inputGroup}>
-                <label htmlFor="email">Email:</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="Your Email"
-                  required
-                  className={styles.input}
-                />
-              </div>
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
+  const handleSubmit = (e:any) => {
+    e.preventDefault();
+    //vars for constants
+    const serviceID = "service_0lbamkw";
+    const templateID = "template_mipgi6q";
+    const publicKey = "rO7cd7bhC38zhrnuI";
+    // parameter templace
+    const templateParms = {
+      from_name: name,
+      from_email: email,
+      to_name: "Jason",
+      message: message,
+    };
+    //code to send email
+    emailjs.send(serviceID, templateID,templateParms,publicKey) 
+           .then((response)=>{
+            console.log('email sent successfully',response);
+            setName('');
+            setEmail('');
+            setMessage('');
+           }) // why no semicolon here
+           .catch((error)=> {
+            console.error('error sending email:',error);
+           });
+  }
 
-
-                {/* messages input place */}
-              <div className={styles.inputGroup}>
-                <label htmlFor="message">Message:</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  placeholder="Your Message"
-                  required
-                  className={styles.textarea}
-                ></textarea>
-              </div>
-
-
-              <button type="submit" className={styles.button}>
-                Submit
-              </button>
-            </form>
-
+  return (
+    <div className={styles.masterContainer}>
+      <div className={styles.container}>
+        <div>
+          <h1 className={styles.title}> Contact Me</h1>
+          <form className={styles.form} onSubmit={handleSubmit}>
+            {/* name input place */}
+            <div className={styles.inputGroup}>
+              <label htmlFor="name">Name:</label>
+              <input
+                type="text"
+                value={name}
+                name="name"
+                placeholder="Your Name"
+                required
+                className={styles.input}
+                onChange={(e) => setName(e.target.value)}
+              />
             </div>
-            
 
-
-
-            <div className={styles.socialLinks}>
-              <h3>Connect with me:</h3>
-             
-
-              <a href="https://linkedin.com/in/jasonyu101" target="_blank" rel="noopener noreferrer" className={styles.link}>
-                LinkedIn
-              </a>
-              <a href="https://github.com/jasonyu0705" target="_blank" rel="noopener noreferrer" className={styles.link}>
-                GitHub
-              </a>
-              <a href="mailto:jasonyu0705@gmail.com" className={styles.link}>
-                Email
-              </a>
-              </div>
-            
+            {/* email input place */}
+            <div className={styles.inputGroup}>
+              <label htmlFor="email">Email:</label>
+              <input
+                type="email"
+                value={email}
+                name="email"
+                placeholder="Your Email"
+                required
+                className={styles.input}
+                onChange={(e) => setEmail(e.target.value)}
+              />
             </div>
-          </div>
 
-          
-        );
-      };
-            
+            {/* messages input place */}
+            <div className={styles.inputGroup}>
+              <label htmlFor="message">Message:</label>
+              <textarea
+                value={message}
+                name="message"
+                placeholder="Your Message"
+                required
+                className={styles.input}
+                onChange={(e) => setMessage(e.target.value)}
+              ></textarea>
+            </div>
 
+            <button type="submit" className={styles.button}>
+              Submit
+            </button>
+          </form>
+        </div>
+
+        <div className={styles.socialLinks}>
+          <h3>Connect with me:</h3>
+
+          <a
+            href="https://linkedin.com/in/jasonyu101"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.link}
+          >
+            LinkedIn
+          </a>
+          <a
+            href="https://github.com/jasonyu0705"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.link}
+          >
+            GitHub
+          </a>
+          <a href="mailto:jasonyu0705@gmail.com" className={styles.link}>
+            Email
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+}

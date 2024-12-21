@@ -35,10 +35,11 @@
     top: 50%;
    align-content: center;
  }
-/* .inputGroup {
+.input {
     transition: width 0.4s ease-in-out;
+    color:black;
   }
   
 .inputGroup:focus {
     width: 100%;
-  } */
+  } 
