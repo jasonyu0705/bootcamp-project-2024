@@ -9,10 +9,10 @@
       min-height: 100vh;
       border-radius: 25px;
       padding:20px;
-      background:#284333 ;
+      background:#3A6A8C ;
+      border-color: #F08A5D;
+      border-width: 4px;
     }
-
-
 
   .portrait{
     display: block;
@@ -20,6 +20,11 @@
   margin-right: auto;
   width: 50%;
     border-radius: 25px;
+    border-color: #F9D342;
+      border-width: 4px;
+  }
+  .about_me{
+    color:#E4E4E4;
   }
 
 

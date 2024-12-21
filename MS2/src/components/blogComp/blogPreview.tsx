@@ -11,14 +11,15 @@ export default function BlogPreview(props: Blog)  {
 		// with your code from earlier milestones
     
     <div className={style.info}>
-      {/* <h2 key={blogs.slug}></h2> */}
-    <Link className={style.title} href={`/blog/${props.slug}`}> {props.title} </Link>
-        <h3 className={style.date}> {new Date(props.date).toLocaleDateString()}</h3>
-        <div>
-          <img className={style.photo}
+      <div>
+        <Link className={style.title} href={`/blog/${props.slug}`}> {props.title} </Link>
+           <h3 className={style.date}> {new Date(props.date).toLocaleDateString()}</h3>
+              <img className={style.photo}
               src={props.image} 
               alt={props.image_alt || 'Blog Image'} 
           />
+          </div>
+          <div>
           <p className={style.description}>{props.description}</p>
         </div>
 

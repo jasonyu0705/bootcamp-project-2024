@@ -13,7 +13,7 @@ export default function Home() {
           <img className={style1.portrait} src='/H4I_PORTRAIT.jpg' alt="portrait" style={{ width: '400px', height: 'auto' }}/>
           </div>
         <p className={style1.about_me}>
-        Hello! I am a second-year student studying computer engineering at California Polytechnic State University in San Luis Obispo. I hold strong interests in topics such as robotics, electrical engineering, and  I thoroughly enjoy utilizing my hands-on skills to solve problems. I believe that these abilities will enable me to excel in various tasks within my field of study.
+        Hello, my name is Jason! I am a second-year student studying computer engineering at California Polytechnic State University in San Luis Obispo. I hold strong interests in topics such as robotics, electrical engineering, and  I thoroughly enjoy utilizing my hands-on skills to solve problems. I believe that these abilities will enable me to excel in various tasks within my field of study.
         </p>
            
       </main>

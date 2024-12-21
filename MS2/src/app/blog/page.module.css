@@ -1,19 +1,17 @@
 
 .pageTitle{
-    background-color: rgb(82, 174, 105);
-    font-family:"verdana";
+    background-color:#1A2A44;
+color:#e4e4e4 ;
     border-radius: 20px;
+    width:70vw;
+    text-align: center;
+    margin:0 auto;
 }
 .blogContainer{
     /* display:flex; */
-    font-family:"verdana";
     padding:20px;
-
+    background-color:#3B4C66;
     margin:auto;
-
+    
 }
-.photo{
 
-    padding: 20px;
-    max-height: 10px;
-}

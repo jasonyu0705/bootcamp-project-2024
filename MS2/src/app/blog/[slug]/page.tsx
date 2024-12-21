@@ -56,20 +56,29 @@ export default async function Blog({params}: Props) {
 
 	return(
         <div className={style.info}>
-			
+			<div className={style.blogContent}>
+			<div>	
        <h3 className={style.title}>{blog.title} </h3>
        <h3 className={style.date}> {new Date(blog.date).toLocaleDateString()}</h3>
-        <div>
         <img className={style.photo}
               src={blog.image} 
               alt={blog.image_alt || 'Blog Image'} />
-            <p className={style.description}>{blog.description}</p>
+            
           </div>
+			<p className={style.description}>{blog.description}</p>
+
+
           <div className={style.comment}>
+			<p>Comment Section</p>
             {blog.comments.map((comment: any, index:any) => (
 	                <Comment key={index} comment={comment} />
 	            ))}
           </div>
+
+
+			</div>
+	
+		  
 		<NewComment slug={slug}/>		  
 	  </div>
 	
