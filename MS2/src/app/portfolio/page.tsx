@@ -13,6 +13,19 @@ export default async function portfolio() {
         {projects.map(project =>
                <ProjectPreview {...(project as any)._doc} key={project.title} />
             )}
+
+
+{projects.map((projects, index) => (
+          <div key={index} className={portStyle.projPrev}>
+            <ProjectPreview
+              title={projects.title}
+              skills={projects.skills}
+              content1={projects.content1}
+              content2={projects.content2}
+              comments={projects.comments}
+            />
+          </div>
+        ))}
       </section>
     </div>
   );

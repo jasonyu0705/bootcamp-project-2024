@@ -9,6 +9,13 @@ type Props = {
   }>;
 };
 
+
+type commentType = {
+	user: string;
+	content: string;
+	time: Date;
+}
+
 async function getProject(title: string) {
   try {
     // This fetches the blog from an api endpoint that would GET the blog
@@ -59,7 +66,7 @@ export default async function Project({ params }: Props) {
 
           <div className={style.comment}>
             <p>Comment Section</p>
-            {project.comments.map((comment: any, index: any) => (
+            {project.comments.map((comment: commentType, index: number) => (
               <Comment key={index} comment={comment} />
             ))}
           </div>
