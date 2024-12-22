@@ -28,7 +28,7 @@ async function getBlog(slug: string) {
 		}
 		return res.json();
 	} catch (err: unknown) {
-		// console.log(`error: ${err}`);
+		console.log(`error: ${err}`);
 		return null;
 		// `` are a special way of allowing JS inside a string
 		// Instead of "error: " + err, we can just do the above

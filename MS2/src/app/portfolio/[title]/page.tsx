@@ -2,7 +2,6 @@
 import style from "./page.module.css";
 import Comment from "@/components/projectComp/comment";
 import NewComment from "../../../components/projectComp/newComment";
-import Link from "next/link";
 
 type Props = {
   params: Promise<{
@@ -23,7 +22,7 @@ async function getProject(title: string) {
     }
     return res.json();
   } catch (err: unknown) {
-    // console.log(`error: ${err}`);
+    console.log(`error: ${err}`);
     return null;
     // `` are a special way of allowing JS inside a string
     // Instead of "error: " + err, we can just do the above

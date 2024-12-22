@@ -28,6 +28,7 @@ async function getProjects(){
 			// send a response as the blogs as the message
 	    return projects
 	} catch (err) {
+      console.log(err)
 	    return []
 	}
 }
