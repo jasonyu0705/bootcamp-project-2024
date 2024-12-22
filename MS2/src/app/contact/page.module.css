@@ -3,7 +3,7 @@
 .masterContainer{
 
 
-    background-color: #3B4C66;
+    background-color: #1A2A44;
     padding:20px;
     margin:auto;
     width:50vw;
@@ -31,7 +31,7 @@
 }
 .form{
     
-    background-color: #1A2A44;
+    background-color: #3B4C66;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(172, 60, 60, 0.1);
 }
