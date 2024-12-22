@@ -1,8 +1,9 @@
-
+"use client";
 //import { Blog } from "@/database/blogSchema";
 import style from './blg.module.css'
 import Comment from "@/components/blogComp/comment";
 import NewComment from '../../../components/blogComp/newComment';
+import { useState,useEffect } from 'react';
 
 
 // type Props = {
@@ -38,12 +39,19 @@ async function getBlog(slug: string) {
 //							parameter        object skeleton
 export default async function Blog({params}: Props) {
 	const slug = (await params).slug;
-    const blog = await getBlog(slug);
+    const b = await getBlog(slug)
+	const [blog, setBlog] = useState(b)
+	const [reloadBlog, setReloadBlog] = useState(false);
+	useEffect(()=>{
+		async function fetchBlog() {
+		const data = await getBlog(slug);
+		setBlog(data);
 
-	 //console.log('params        ',params);
+		}
+		fetchBlog();
+		console.log("use effect entered")
+	  }, [reloadBlog,slug]);
 
-
-	
 	if(!blog){
 		 console.log("hello")
 		return(
@@ -53,8 +61,8 @@ export default async function Blog({params}: Props) {
 		);
 	  }
 	if(blog){
-
 	return(
+
         <div className={style.info}>
 			<div className={style.blogContent}>
 			<div>	
@@ -78,8 +86,7 @@ export default async function Blog({params}: Props) {
 
 			</div>
 	
-		  
-		<NewComment slug={slug}/>		  
+			<NewComment slug={slug} handleReload={() => setReloadBlog(!reloadBlog)}/>  
 	  </div>
 	
     );

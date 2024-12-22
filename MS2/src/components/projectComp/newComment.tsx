@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import style from "../blogComp/newCom.module.css";
+import style from "./newCom.module.css";
 //type definitions
 type commentData = {
   user: string;
@@ -69,7 +69,7 @@ export default function NewComment({ title }: Props) {
 
   return (
 
-    <div className= {style.commentSec}>
+    <div className= {style.commentSection}>
       <h2>Leave a Comment!</h2>
       <form className="formInfo" onSubmit={handleSubmit}>
         <div>

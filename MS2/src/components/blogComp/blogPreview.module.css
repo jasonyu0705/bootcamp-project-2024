@@ -4,7 +4,6 @@
     display:flex;
     background-color: #1A2A44;
     padding:20px;
-
     margin:auto;
     width:50vw;
     text-align: center;
@@ -13,22 +12,26 @@
     max-width: 1000px;
     box-shadow: 0 4px 8px rgba(172, 60, 60, 0.1);
   }
-
-
 .photo{
     display:block;
     margin:auto;  
-
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(172, 60, 60, 0.1);
 }
 .title{
-    background-color:#121212;
+    background-color:#444444;
     text-align: center;
-    border-radius: 16px;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(172, 60, 60, 0.1);
     margin:auto;
 }
 .date{
-    background-color: #121212;
+    background-color: #444444;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(172, 60, 60, 0.1);
 }
 .description{
-    background-color: #121212;
+    background-color: #444444;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(172, 60, 60, 0.1);
 }
