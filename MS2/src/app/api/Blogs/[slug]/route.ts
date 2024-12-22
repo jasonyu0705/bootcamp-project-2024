@@ -26,6 +26,7 @@ export async function GET(req: NextRequest, { params }: Props) {
 			//console.log('get blog blog										',blog);
 	        return NextResponse.json(blog)
 	    } catch (err) {
+			console.log(err);
 	        return NextResponse.json('Blog not found.', { status: 404 })
 	    }
 }
