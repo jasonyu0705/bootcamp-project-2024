@@ -5,7 +5,11 @@ import Comment from "@/components/blogComp/comment";
 import NewComment from '../../../components/blogComp/newComment';
 //import { useState } from 'react';
 
-
+type commentType = {
+	user: string;
+	content: string;
+	time: Date;
+}
 // type Props = {
 //     params: { slug: string }
 // }
@@ -68,7 +72,7 @@ export default async function Blog({params}: Props) {
 
           <div className={style.comment}>
 			<p>Comment Section</p>
-            {blog.comments.map((comment: any, index:any) => (
+            {blog.comments.map((comment: commentType, index:number) => (
 	                <Comment key={index} comment={comment} />
 	            ))}
           </div>
