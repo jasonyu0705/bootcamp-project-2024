@@ -1,0 +1,10 @@
+.commentSec{
+    background-color: #121212;
+    font-family: Verdana;
+    padding:20px;
+    border-radius: 20px;
+    }
+    .user, .comment{
+        color:black;
+    
+    }

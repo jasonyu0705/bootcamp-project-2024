@@ -98,8 +98,9 @@ export default function contact() {
             target="_blank"
             rel="noopener noreferrer"
             className={styles.link}
+
           >
-          <img className={styles.portrait} src='linkedin.jpg' alt="portrait" style={{ width: '40px', height: 'auto' }}/>
+          <img className={styles.portrait} src='linkedin.jpg' alt="portrait"  style={{ width: '40px', height: 'auto' }}/>
           </a>
 
           <a

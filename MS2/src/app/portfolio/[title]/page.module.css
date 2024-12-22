@@ -1,0 +1,26 @@
+
+  .info {
+    background-color: #3B4C66;
+    padding: 12px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 12px;
+    max-width:70vw;
+    text-align: center;
+    margin:  0 auto;
+    margin-bottom: 20px;
+    
+  }
+ .comment{
+  background-color: #1A2A44; 
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 50vw;
+  margin:  0 auto;
+ }
+ .commentSec{
+  margin:  0 auto;
+  width:70vw;
+  text-align: center;
+
+ }
