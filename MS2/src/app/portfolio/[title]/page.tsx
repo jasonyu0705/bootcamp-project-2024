@@ -19,7 +19,7 @@ type commentType = {
 async function getProject(title: string) {
   try {
     // This fetches the blog from an api endpoint that would GET the blog
-    const res = await fetch(`api/projects/${title}`, {
+    const res = await fetch(`https://bootcamp-project-2024-zeta.vercel.app/api/projects/${title}`, {
       cache: "no-store",
     });
     // console.log(res)
@@ -48,7 +48,7 @@ export default async function Project({ params }: Props) {
     console.log("hello");
     return (
       <div>
-        <h1 className="pageTitle">404 - project Not Found</h1>
+        <h1 className="pageTitle">404 - Blog Not Found</h1>
       </div>
     );
   }
