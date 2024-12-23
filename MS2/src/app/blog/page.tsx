@@ -4,7 +4,7 @@ import connectDB from "@/database/db";
 import Blogimp, { Blog } from "@/database/blogSchema";
 import React from "react";
 
-export default async function Blog_Home() {
+export default async function BlogHome() {
   const blogs: Blog[] = await getBlogs();
   return (
     <div>
