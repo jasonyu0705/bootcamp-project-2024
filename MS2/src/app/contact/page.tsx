@@ -3,7 +3,7 @@ import emailjs from "emailjs-com";
 import React, { useState } from "react";
 import styles from "./page.module.css";
 
-export default function contact() {
+export default function Contact() {
 
 
   const [name, setName] = useState("")    
