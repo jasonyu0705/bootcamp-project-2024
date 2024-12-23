@@ -7,7 +7,7 @@ import NewComment from '../../../components/blogComp/newComment';
 
 type commentType = {
 	user: string;
-	content: string;
+	content: string; 
 	time: Date;
 }
 // type Props = {
