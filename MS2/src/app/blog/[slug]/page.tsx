@@ -22,7 +22,7 @@ type Props = {
 async function getBlog(slug: string) {
 	try {
 		// This fetches the blog from an api endpoint that would GET the blog
-		const res = await fetch(`http://localhost:3000/api/blogs/${slug}`, {
+		const res = await fetch(`https://bootcamp-project-2024-j5k355gyh-jason-yus-projects-27b88668.vercel.app/blog/${slug}`, {
 			cache: "no-store",	
 		})
 		// console.log(res)
