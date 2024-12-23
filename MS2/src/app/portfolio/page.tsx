@@ -10,9 +10,9 @@ export default async function portfolio() {
       {/* Projects */}
       <section className={portStyle.profile_section}>
         <h2 className={portStyle.profile_section_title}>Projects</h2>
-        {projects.map(project =>
+        {/* {projects.map(project =>
                <ProjectPreview {...(project as any)._doc} key={project.title} />
-            )}
+            )} */}
 
 
 {projects.map((projects, index) => (

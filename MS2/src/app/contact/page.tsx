@@ -6,11 +6,11 @@ import styles from "./page.module.css";
 export default function contact() {
 
 
-  const [name, setName] = useState("");
+  const [name, setName] = useState("")    
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-  const handleSubmit = (e:any) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     //vars for constants
     const serviceID = "service_0lbamkw";

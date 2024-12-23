@@ -22,7 +22,7 @@ export default function Resume() {
         <strong>California Polytechnic State University</strong> - San Luis Obispo, CA
       </p>
       <p>Expected June 2026</p>
-      <p>Bachelor of Science in Computer Engineering (GPA: 3.75 / 4.00) - President's List</p>
+      <p>Bachelor of Science in Computer Engineering (GPA: 3.75 / 4.00) - President&apos;s List</p>
       <p>
         Coursework: Assembly Language and Computer Design, Digital Design, Data Structures, 
         Project-Based OOP, Circuits I & II, Discrete Structures, Systems Programming
@@ -38,8 +38,8 @@ export default function Resume() {
       <p><strong>California Polytechnic State University</strong> - San Luis Obispo, CA</p>
       <p>Instructional Student Assistant (Sept 2024 – Present)</p>
       <ul>
-        <li>Facilitated office hours to support students' understanding of Object-Oriented Programming concepts.</li>
-        <li>Aided in grading labs, problem sets, and projects for 25 students.</li>
+      <li>Facilitated office hours to support students&apos; understanding of Object-Oriented Programming concepts.</li>
+      <li>Aided in grading labs, problem sets, and projects for 25 students.</li>
       </ul>
     </div>
 
@@ -47,7 +47,7 @@ export default function Resume() {
       <p><strong>California Polytechnic State University</strong> - San Luis Obispo, CA</p>
       <p>Summer Undergraduate Research Program Volunteer (Jul 2024 – Aug 2024)</p>
       <ul>
-        <li>Labeled data to train OpenAI's GPT-3.5 model for generating high-scoring resumes.</li>
+      <li>Labeled data to train OpenAI&apos;s GPT-3.5 model for generating high-scoring resumes.</li>
       </ul>
     </div>
 
