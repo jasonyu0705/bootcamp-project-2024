@@ -1,11 +1,14 @@
 import styles from "./page.module.css";
 import BlogPreview from "@/components/blogComp/blogPreview";
 import connectDB from "@/database/db";
-import Blogimp, { Blog } from "@/database/blogSchema";
+import Blogimp from "@/database/blogSchema";
 import React from "react";
 
 export default async function BlogHome() {
-  const blogs: Blog[] = await getBlogs();
+  const blogs = await getBlogs();
+  if (!blogs) {
+    return <div> Blog Not Found </div>;
+  }
   return (
     <div>
       <h1 className={styles.pageTitle}>Blogs</h1>
@@ -42,6 +45,6 @@ async function getBlogs() {
     return blogs;
   } catch (err) {
     console.log(err);
-    return [];
+    return null;
   }
 }
