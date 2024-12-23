@@ -48,7 +48,7 @@ export default async function Project({ params }: Props) {
     console.log("hello");
     return (
       <div>
-        <h1 className="pageTitle">404 - Blog Not Found</h1>
+        <h1 className="pageTitle">404 - project Not Found</h1>
       </div>
     );
   }
