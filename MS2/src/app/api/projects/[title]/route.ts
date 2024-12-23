@@ -2,11 +2,11 @@ import { NextRequest, NextResponse } from 'next/server'
 import connectDB from "@/database/db"// changed from helpers to database
 import projectSchema from "@/database/projectSchema"
 
-type Props = {
-		params:{
-			title: string
-		};
-}
+// type Props = {
+// 		params:{
+// 			title: string
+// 		};
+// }
 type PropsProm = {
 	params:Promise <{
 		title: string
@@ -14,7 +14,7 @@ type PropsProm = {
 }
 
 // If { params } looks confusing, check the note below this code block
-export async function GET(req: NextRequest, { params }: Props) {
+export async function GET(req: NextRequest, { params }: PropsProm) {
     await connectDB() // function from db.ts before
 	const title = (await params).title;
 
