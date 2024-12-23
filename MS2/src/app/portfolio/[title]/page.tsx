@@ -19,7 +19,7 @@ type commentType = {
 async function getProject(title: string) {
   try {
     // This fetches the blog from an api endpoint that would GET the blog
-    const res = await fetch(`https://bootcamp-project-2024-zeta.vercel.app/api/portfolio/${title}`, {
+    const res = await fetch(`api/projects/${title}`, {
       cache: "no-store",
     });
     // console.log(res)
