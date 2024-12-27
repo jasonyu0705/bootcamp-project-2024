@@ -44,7 +44,7 @@ export default function NewComment({ title }: Props) {
     try {
       //                                this may change
       
-      const response = await fetch(`http://localhost:3000/api/projects/${title}`, {
+      const response = await fetch(`https://bootcamp-project-2024-zeta.vercel.app/api/projects/${title}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
