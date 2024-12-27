@@ -24,7 +24,7 @@ export default function NewComment({ slug }: Props) {
 
 
   
-
+//test
   const [status, setStatus] = useState("");
   // only reacts to chenges in input or textarea
 
